@@ -1,0 +1,39 @@
+<students>
+    <student>
+        <first_name>John Carter</first_name>
+        <address>
+            <house_no>38</house_no>
+            <street>R#3</street>
+            <area>Banani</area>
+            <city>Dhaka</city>
+        </address>
+        <department>Sales</department>
+        <salary>$20000</salary>
+    </student>
+
+    <student>
+        <first_name>Mark Zuckerberg</first_name>
+        <address>
+            <flat>A/1</flat>
+            <house_no>20</house_no>
+            <street>18</street>
+            <area>Mirpur</area>
+            <city>Dhaka</city>
+        </address>
+        <department>Account</department>
+        <salary>$12000</salary>
+    </student>
+
+    <student>
+        <first_name>Ala Voski</first_name>
+        <address>
+            <house_no>38</house_no>
+            <street>3</street>
+            <area>Motijheel</area>
+           
+        </address>
+        <department>Human Resource</department>
+        <salary>$30000</salary>
+    </student>
+</students>
+
