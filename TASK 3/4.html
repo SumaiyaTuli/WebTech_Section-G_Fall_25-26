@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Date of Birth</h3>
+
+<form id="dobForm">
+  dd: <input id="dd" size="1.5" maxlength="2"> /
+  mm: <input id="mm" size="1.5" maxlength="2"> /
+  yyyy: <input id="yyyy" size="6" maxlength="4">
+
+  <br><br>
+  <button type="submit">Submit</button>
+
+  <p id="msg"></p>
+</form>
+
+<script>
+document.getElementById("dobForm").onsubmit = function(e) {
+  e.preventDefault();
+
+  let dd = document.getElementById("dd").value.trim();
+  let mm = document.getElementById("mm").value.trim();
+  let yyyy = document.getElementById("yyyy").value.trim();
+  let msg = document.getElementById("msg");
+
+  msg.innerHTML = "";
+
+  if (dd === "" || mm === "" || yyyy === "") {
+    msg.innerHTML = "Fields cannot be empty.";
+    return;
+  }
+
+  if (isNaN(dd) || isNaN(mm) || isNaN(yyyy)) {
+    msg.innerHTML = "All values must be numbers.";
+    return;
+  }
+
+  if (dd < 0 || dd > 31) {
+    msg.innerHTML = "Day must be 0-31.";
+    return;
+  }
+
+  if (mm < 1 || mm > 12) {
+    msg.innerHTML = "Month must be 1-12.";
+    return;
+  }
+
+  if (yyyy < 1900 || yyyy > 2016) {
+    msg.innerHTML = "Year must be 1900-2016.";
+    return;
+  }
+
+  msg.innerHTML = "Valid Date of Birth!";
+};
+</script>
+
+</body>
+</html>

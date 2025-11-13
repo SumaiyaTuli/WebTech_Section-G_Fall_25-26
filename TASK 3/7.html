@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Profile Picture</h3>
+
+<form id="picForm">
+
+  User Id
+  <input id="uid" size="30"><br><br>
+
+  Picture
+  <input id="pic" type="file"><br><br>
+
+  <hr>
+
+  <button type="submit">Submit</button>
+
+  <p id="msg"></p>
+
+</form>
+
+<script>
+document.getElementById("picForm").onsubmit = function(e) {
+  e.preventDefault();
+
+  let uid = document.getElementById("uid").value.trim();
+  let pic = document.getElementById("pic").value;
+  let msg = document.getElementById("msg");
+
+  msg.innerHTML = "";
+
+  if (uid === "") {
+    msg.innerHTML = "User Id cannot be empty.";
+    return;
+  }
+
+  if (isNaN(uid) || Number(uid) <= 0) {
+    msg.innerHTML = "User Id must be a positive number.";
+    return;
+  }
+
+  if (pic === "") {
+    msg.innerHTML = "Picture cannot be empty.";
+    return;
+  }
+
+  msg.innerHTML = "Successfull!";
+};
+</script>
+
+</body>
+</html>
